@@ -1,0 +1,11 @@
+a_1 = int(input("choose a number between 0 and 9"))
+a_2 = int(input("choose another number between 0 and 9"))
+sequence = []
+sequence.append(a_1) 
+sequence.append(a_2)
+i = 0
+while sequence[-2] != a_1 or sequence[-1] != a_2 or len(sequence)<=2:
+    modulus = (sequence[i] + sequence[i+1]) % 10
+    sequence.append(modulus)
+    i += 1
+print(sequence)
